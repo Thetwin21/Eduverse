@@ -1,0 +1,52 @@
+.filter {
+    min-width: 200px;
+    background: #fff;
+    padding: .12em 1.5em;
+    border-radius: 3px;
+    overflow-y: scroll;
+    height: 100%;
+    input[type="checkbox"] {
+        // appearance: none;
+        margin: 0;
+        // font: inherit;
+        color: currentColor;
+        width: 1.15em;
+        height: 1.15em;
+        border: 0.15em solid currentColor;
+        cursor: pointer;
+
+    }
+    label + label {
+        margin-top: .7em;
+    }
+    label {
+        display: flex;
+        align-items: center;
+        gap: .5em;
+    }
+    h3 {
+        margin:.5em 0 .8em 0;
+    }
+    .filter-content {
+        .speciality {
+        display: flex;
+        flex-direction: column;
+        }
+        input[type="search"] {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #E8E8EF;
+        }
+        input[type="search"]::placeholder {
+            color: #b5b5b8;
+        }
+    }
+    .budget {
+    display: flex;
+    flex-direction: column;
+    }
+}
+        .filter::-webkit-scrollbar {
+            width: 1px;
+        }

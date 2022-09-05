@@ -1,0 +1,17 @@
+@import "./dashboardUI/edulance.scss";
+@import "./dashboardUI/Sidebar.scss";
+@import "./dashboardUI/Nav/navbar.scss";
+@import "./dashboardUI/Filter.scss";
+@import "./dashboardUI/post.scss";
+@import "./dashboardUI/Nav/navProfile.scss";
+@import "./dashboardUI/ShootShot/ShotPage.scss";
+@import "./dashboardUI/ShootShot/ShotForm.scss";
+@import "./dashboardUI/ShootShot/Period.scss";
+
+*,
+::after ,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}

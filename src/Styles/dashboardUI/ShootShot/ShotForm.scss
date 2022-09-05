@@ -1,0 +1,175 @@
+$inputBackgorundColor: #e8e8ef;
+$-smallGap: 1em;
+$-borderRadius: 0.5em;
+
+.shotForm {
+  label {
+    font-size: 3vmin;
+    font-weight: 600;
+  }
+  select {
+    display: block;
+    width: 100%;
+    outline: none;
+    padding: 0.8rem 1em;
+    font-size: 1.1rem;
+    margin: $-smallGap 0;
+    border-radius: $-borderRadius;
+    color: rgba(27, 26, 26, 0.72);
+    background: #e8e8ef;
+    // border: 0.1px solid #667085;
+    border: none;
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+    cursor: pointer;
+  }
+  select:focus,
+  select:hover {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+  }
+  // payment method
+  .paymentMtd {
+    display: flex;
+    flex-direction: column;
+    padding: 0.4em;
+    margin: 0.5em 0;
+    span {
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+    }
+    .endP {
+      //   margin-top: 1em;
+      margin: 0.4em 0;
+    }
+    .milestone-btn {
+      display: flex;
+      flex-direction: column;
+      gap: .5em;
+      width: 100%;
+      margin: $-smallGap 0;
+      .inputs {
+        display: flex;
+        gap: $-smallGap;
+        input {
+          width: 50%;
+          padding: .8em;
+          text-indent: 10px;
+          background: #e8e8ef;
+          border: none;
+          border-radius: $-borderRadius;
+        }
+      }
+      button {
+        align-self: flex-start;
+        background-color: transparent;
+        color: #004B82;
+        border: none;
+        padding: $-smallGap;
+        cursor: pointer;
+      }
+    }
+  }
+  .bargain-container {
+    margin-bottom: $-smallGap;
+    label {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: $-smallGap;
+      gap: 0.2em;
+      .bargain-para {
+        font-size: 3vmin;
+        font-weight: 600;
+        color: #000;
+      }
+      p {
+        font-size: 2vmin;
+        font-weight: 400;
+        color: #667085;
+      }
+    }
+    input {
+      width: 100%;
+      font-size: 1.1rem;
+      padding: 10px;
+      border-radius: $-borderRadius;
+      text-indent: 5px;
+      background: #e8e8ef;
+      border: none;
+    }
+  }
+  .shot-message {
+    label {
+      font-size: 3vmin;
+      font-weight: 600;
+    }
+    textarea {
+      width: 100%;
+      background: #e8e8ef;
+      border-radius: $-borderRadius;
+      border: none;
+      padding: $-smallGap;
+      margin: $-smallGap;
+    }
+  }
+  .file-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5em;
+    p {
+      align-self: flex-start;
+      font-weight: 600;
+      small {
+        font-weight: 300;
+      }
+    }
+
+    .file {
+      position: relative;
+      width: 200px;
+      height: 40px;
+      display: inline-block;
+      background: #e6f3fd;
+      border-radius: $-borderRadius;
+      border: 1px solid #0089ed;
+
+      button {
+        display: flex;
+        border: 0;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 40px;
+        background: transparent;
+        border-radius: $-borderRadius;
+        color: #000;
+        width: 100%;
+        height: 100%;
+        gap: .2em;
+        cursor: pointer;
+      }
+      input[type="file"] {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        top: 0;
+        right: 0;
+        // opacity: 0;
+      }
+    }
+  }
+  .submit-btn {
+    width: 100%;
+    padding: $-smallGap;
+    margin: $-smallGap 0;
+    background: #0089ed;
+    color: #fff;
+    border: none;
+    border-radius: $-borderRadius;
+    cursor: pointer;
+  }
+}

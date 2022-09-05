@@ -1,0 +1,61 @@
+.edulance {
+  // box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    background: #bfd3fa28;
+    gap: 0.2em;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 2.2em;
+
+    .post-date {
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+
+      :first-child {
+        h3 {
+          color: #101828;
+        }
+        p {
+          font-size: 0.8em;
+          color: #667085;
+        }
+      }
+      button {
+        padding: 0.5em 1.2em;
+        border-radius: 10px;
+        border: none;
+        background: #0089ed;
+        color: #ffffff;
+        cursor: pointer;
+      }
+    }
+    .post-container {
+      display: flex;
+      margin-top: 0.8em;
+      height: calc(100vh - 120px);
+      gap: 2em;
+
+      .posts {
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+        border-radius: 3px;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+      }
+      .posts::-webkit-scrollbar {
+        width: 2px;
+      }
+      .posts::-webkit-scrollbar-thumb {
+        background: #5c606590;
+      }
+    }
+  }
+}
