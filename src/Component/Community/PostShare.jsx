@@ -4,9 +4,9 @@ import { MdPhoto } from "react-icons/md";
 // import {}
 
 const PostShare = () => {
-  const [photo, getPhoto] = useState(null);
-  const [video, getVideo] = useState(null);
-  const [event, getEvent] = useState(null);
+  const [photos, getPhotos] = useState(null);
+  const [videos, getVideos] = useState(null);
+  const [eventFiles, getEventFiles] = useState(null);
   const photoRef = useRef();
   const videoRef = useRef();
   const eventRef = useRef();
@@ -15,21 +15,21 @@ const PostShare = () => {
   const onGetPhoto = (event) => {
     if (event.target.files && event.target.files[0]) {
       const photoFile = event.target.files[0];
-      getPhoto({ photo, photo: URL.createObjectURL(photoFile) });
+      getPhotos({ photos, photo: URL.createObjectURL(photoFile) });
     }
   };
   //get photo file
   const onGetVideo = (event) => {
     if (event.target.files && event.target.files[0]) {
       const videoFile = event.target.files[0];
-      getVideo({ video, video: URL.createObjectURL(videoFile) });
+      getVideos({ videos, video: URL.createObjectURL(videoFile) });
     }
   };
   // get event
-  const onGetevent = (event) => {
+  const onGetEvent = (event) => {
     if (event.target.files && event.target.files[0]) {
       const eventFile = event.target.files[0];
-      getEvent({ event, event: URL.createObjectURL(eventFile) });
+      getEventFiles({ eventFiles, events: URL.createObjectURL(eventFile) });
     }
   };
   return (
@@ -72,7 +72,7 @@ const PostShare = () => {
               type="file"
               name="eventFile"
               ref={eventRef}
-              onChange={onGetevent}
+              onChange={onGetEvent}
               id="file"
               style={{ display: "none" }}
             />
