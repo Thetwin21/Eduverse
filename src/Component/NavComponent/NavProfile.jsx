@@ -16,7 +16,7 @@ const NavProfile = () => {
       </div>
       <div className="profile-logo">
         <div className="img">
-          <img src="../Asset/0ca3ac3d979e4c22ef2efb16a6b3e0b0.png" alt="" />
+          <img src="../Asset/profileImg.png" alt="" />
         </div>
         <div className="text">
           <h3>Obi Ego</h3>

@@ -2,12 +2,13 @@ import React from 'react'
 
 const FilterBox = () => {
   return (
-    <div className='filter'>
-      <div className='filter-content'>
-        <h3>Filter</h3>
+    <section className='filter'>
+      <section className='filter-content'>
+        <h4>Filter</h4>
         <input type="search" name="" placeholder='sill, tag , keyword' id="" />
+        <hr />
         <div className="speciality">
-          <h3>Specilties</h3>
+          <h4>Specilties</h4>
           <label htmlFor="">
            <input type="checkbox" name="Autocad" id="" /> Autocad
           </label>
@@ -28,9 +29,10 @@ const FilterBox = () => {
            
           </label>
         </div>
-      </div>
-      <div className="budget">
-        <h3>Budget</h3>
+      </section>
+        <hr />
+      <section className="budget">
+        <h4>Budget</h4>
         <label htmlFor="">
            <input type="checkbox" name="Geosat" id="" /> 1000 - 5000
         </label>
@@ -43,8 +45,9 @@ const FilterBox = () => {
         <label htmlFor="">
            <input type="checkbox" name="Geosat" id="" /> 50000 - 500000
         </label>
-      </div>
-    </div>
+      </section>
+      <button>Filter Results</button>
+    </section>
   )
 }
 

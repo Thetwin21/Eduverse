@@ -1,0 +1,21 @@
+.community {
+    width: 100%;
+    background: var(--bColor);
+    .content-container {
+        display: grid;
+        grid-template-columns: auto 12rem;
+        padding: .2rem 1rem;
+        // margin-bottom: -5rem;
+        overflow-y: auto;
+        gap: var(--space-1);
+        
+        .post-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 85vh;
+            padding: 0 1rem;
+            gap: 1rem;
+        }
+    }
+}

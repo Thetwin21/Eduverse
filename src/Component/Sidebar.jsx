@@ -1,5 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { BsCart3, BsPeople }from 'react-icons/bs';
+import { ImStack }from 'react-icons/im';
+import { HiOutlineLibrary }from 'react-icons/hi';
+import { IoSettingsOutline }from 'react-icons/io5';
 
 const Sidebar = () => {
   return (
@@ -10,19 +14,19 @@ const Sidebar = () => {
       <nav>
         <ul>
           <li className="active-slide">
-            <Link to="/" >Edulance</Link>
+            <NavLink className={({isActive})=> isActive ? "isActive" : "notActive"} to="/"><ImStack /> Edulance</NavLink>
           </li>
           <li>
-            <Link to="/community">Community</Link>
+            <NavLink className={({isActive})=> isActive ? "isActive" : "notActive"} to="/community"><BsPeople /> Community</NavLink>
           </li>
           <li>
-            <Link to="/library">Library</Link>
+            <NavLink className={({isActive})=> isActive ? "isActive" : "notActive"} to="/library"><HiOutlineLibrary /> Library</NavLink>
           </li>
           <li>
-            <Link to="/marketplace">Marketplace</Link>
+            <NavLink className={({isActive})=> isActive ? "isActive" : "notActive"} to="/marketplace"><BsCart3 /> Marketplace</NavLink>
           </li>
           <li>
-            <Link to="/setting">Setting</Link>
+            <NavLink className={({isActive})=> isActive ? "isActive" : "notActive"} to="/setting"><IoSettingsOutline /> Setting</NavLink>
           </li>
         </ul>
       </nav>

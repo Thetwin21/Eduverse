@@ -19,7 +19,6 @@ function App() {
         <Route path="/marketplace" element={<MarketPlace />} />
         <Route path="/setting" element={<Setting />} />
       </Routes>
-
     </div>
     </BrowserRouter>
   );

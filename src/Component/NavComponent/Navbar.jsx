@@ -1,6 +1,6 @@
 import React from "react";
 import { BiSearch } from "react-icons/bi";
-import NavProfile from "./Edulance/NavProfile";
+import NavProfile from "./NavProfile";
 const Navbar = () => {
   return (
     <div className="navbar">

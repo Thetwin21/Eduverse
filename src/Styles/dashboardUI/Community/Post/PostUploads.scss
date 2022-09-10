@@ -1,0 +1,79 @@
+.post-uploads {
+
+  .post {
+    display: flex;
+    border-radius: 0;
+    margin-bottom: 2rem;
+    padding: 15px;
+    background-color: var(--p-backgroundColor);
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+    .profileImg {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+    }
+    .profile-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+      .reactions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .likes-container {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          span {
+            font-size: 0.9rem;
+            color: #656b8a;
+          }
+        }
+        .reaction-btn {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          justify-content: space-evenly;
+          width: 100%;
+          gap: 0.3rem;
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+            font-weight: 500;
+            width: 100%;
+            border: none;
+            border-radius: 7.5px;
+            background: hsla(240, 18%, 92%, 0.753);
+            cursor: pointer;
+            gap: .2rem;
+            .icon {
+                color: #B8B8CD;
+                font-size: .8rem;
+            }
+          }
+        }
+      }
+      .upload-names {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        .upload-name {
+          font-weight: 600;
+        }
+        .upload-username {
+            color: #667085;
+          font-size: 0.8em;
+        }
+      }
+      .time-posted{
+        font-size: var(--h6);
+      }
+    }
+  }
+}

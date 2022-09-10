@@ -2,15 +2,15 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: #fff;
+  background: var(--p-backgroundColor);
   padding: 1.2em;
   border-radius: 10px;
   z-index: 2;
-  > div {
-    margin: 1em 0;
-  }
   hr {
     border-top: 0.2px solid #66708520;
+  }
+  > div {
+    margin: 1em 0;
   }
   :first-child {
     margin-top: 0;
@@ -20,7 +20,7 @@
   .budget,
   .status {
     > :first-child {
-      color: #667085;
+      color: var(--p-color);
       font-size: 0.8em;
       margin-bottom: 5px;
     }
@@ -28,6 +28,7 @@
   .date {
     .date-details {
       font-weight: 600;
+      font-size: var(--h4);
     }
   }
   .tag {
@@ -55,7 +56,7 @@
         }
       }
       .username {
-        color: #667085;
+        color: var(--p-color);
         font-size: 0.8em;
         margin-bottom: 5px;
       }

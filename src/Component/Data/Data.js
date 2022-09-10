@@ -1,7 +1,7 @@
 export const posts = [
   {
     id: 1,
-    url: "../Asset/0ca3ac3d979e4c22ef2efb16a6b3e0b0.png",
+    url: "../Asset/profileImg.png",
     name: "Olivia Rhye",
     username: "@amuluonyenego",
     time: "1hr",
@@ -13,7 +13,7 @@ export const posts = [
   },
   {
     id: 2,
-    url: "../Asset/0ca3ac3d979e4c22ef2efb16a6b3e0b0.png",
+    url: "../Asset/profileImg.png",
     name: "Olivia Rhye",
     username: "@amuluonyenego",
     time: "5hrs",
@@ -25,7 +25,7 @@ export const posts = [
   },
   {
     id: 3,
-    url: "../Asset/0ca3ac3d979e4c22ef2efb16a6b3e0b0.png",
+    url: "../Asset/profileImg.png",
     name: "Olivia Rhye",
     username: "@amuluonyenego",
     time: "2 days",
@@ -37,7 +37,7 @@ export const posts = [
   },
   {
     id: 4,
-    url: "../Asset/0ca3ac3d979e4c22ef2efb16a6b3e0b0.png",
+    url: "../Asset/profileImg.png",
     name: "Olivia Rhye",
     username: "@amuluonyenego",
     time: "2 days",
@@ -49,7 +49,7 @@ export const posts = [
   },
   {
     id: 5,
-    url: "../Asset/0ca3ac3d979e4c22ef2efb16a6b3e0b0.png",
+    url: "../Asset/profileImg.png",
     name: "Olivia Rhye",
     username: "@amuluonyenego",
     time: "2 days",
@@ -61,7 +61,7 @@ export const posts = [
   },
   {
     id: 6,
-    url: "../Asset/0ca3ac3d979e4c22ef2efb16a6b3e0b0.png",
+    url: "../Asset/profileImg.png",
     name: "Olivia Rhye",
     username: "@amuluonyenego",
     time: "2 days",
@@ -73,7 +73,7 @@ export const posts = [
   },
   {
     id: 7,
-    url: "../Asset/0ca3ac3d979e4c22ef2efb16a6b3e0b0.png",
+    url: "../Asset/profileImg.png",
     name: "Olivia Rhye",
     username: "@amuluonyenego",
     time: "2 days",
@@ -85,7 +85,7 @@ export const posts = [
   },
   {
     id: 8,
-    url: "../Asset/0ca3ac3d979e4c22ef2efb16a6b3e0b0.png",
+    url: "../Asset/profileImg.png",
     name: "Olivia Rhye",
     username: "@amuluonyenego",
     time: "2 days",
@@ -97,7 +97,7 @@ export const posts = [
   },
   {
     id: 9,
-    url: "../Asset/0ca3ac3d979e4c22ef2efb16a6b3e0b0.png",
+    url: "../Asset/profileImg.png",
     name: "Olivia Rhye",
     username: "@amuluonyenego",
     time: "2 days",
@@ -109,7 +109,7 @@ export const posts = [
   },
   {
     id: 10,
-    url: "../Asset/0ca3ac3d979e4c22ef2efb16a6b3e0b0.png",
+    url: "../Asset/profileImg.png",
     name: "Olivia Rhye",
     username: "@amuluonyenego",
     time: "2 days",
@@ -121,7 +121,7 @@ export const posts = [
   },
   {
     id: 11,
-    url: "../Asset/0ca3ac3d979e4c22ef2efb16a6b3e0b0.png",
+    url: "../Asset/profileImg.png",
     name: "Olivia Rhye",
     username: "@amuluonyenego",
     time: "2 days",

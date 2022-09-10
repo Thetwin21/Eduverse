@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../Navbar";
+import Navbar from "../NavComponent/Navbar";
 import FilterBox from "./FilterBox";
-import { posts } from "../Data";
+import { posts } from "../Data/Data";
 import Post from "./Post";
 import { useState } from "react";
 import ShotPage from "./ShotPage";
@@ -9,16 +9,16 @@ import { useRef } from "react";
 
 const Edulance = () => {
   const [aShot, shootAshot] = useState(true);
-  const [arrId, getArrId ] = useState(2)
+  const [arrId, getArrId ] = useState("")
  console.log(arrId)
   return (
-    <div className="edulance">
+    <section className="edulance">
       {aShot ? <>
       <Navbar />
-      <div className="content">
+      <section className="content">
         <div className="post-date">
           <div>
-            <h3>Recent new projects</h3>
+            <h3 className="recent-project">Recent new projects</h3>
             <p>36 new projects posted today</p>
           </div>
           <button>Create A Project</button>
@@ -34,9 +34,9 @@ const Edulance = () => {
            </div>
           <FilterBox />
         </div>
-      </div>
+      </section>
       </> : <ShotPage posts={posts} arrId={arrId} shootAshot={shootAshot} />}
-    </div>
+    </section>
   );
 };
 

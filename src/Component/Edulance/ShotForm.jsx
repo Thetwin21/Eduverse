@@ -3,20 +3,22 @@ import { useState } from "react";
 import { FaPaperclip, FaPlus } from "react-icons/fa";
 
 const ShotForm = () => {
-  const [fileInfo, setFileInfo] = useState();
-  const [isFilePicked, setIsFilePicked] = useState(false);
+  const [getFile, setGetFile] = useState(null);
 
   //get the file info
-  const changeHandler = (e) => {
-    setFileInfo(e.target.files[0]);
-    setIsFilePicked(true);
-    console.log(fileInfo);
+  const onChangeFile = (event) => {
+    if (event.target.files && event.target.files[0]) {
+      const file = event.target.files[0];
+      setGetFile({
+        file: URL.createObjectURL(file),
+      });
+    }
   };
 
   const handleSubmit = () => {};
 
   return (
-    <div className="shotForm">
+    <section className="shotForm">
       <form action="">
         <label htmlFor="duration">How long will it take you?</label>
         <select id="duration" className="dropdown">
@@ -46,10 +48,12 @@ const ShotForm = () => {
           </span>
           <div className="milestone-btn">
             <div className="inputs">
-            <input type="text" name="" placeholder="Enter Milestones" id="" />
-            <input type="text" name="" placeholder="&#8358; 10,000" id="" />
+              <input type="text" name="" placeholder="Enter Milestones" id="" />
+              <input type="text" name="" placeholder="&#8358; 10,000" id="" />
             </div>
-            <button><FaPlus /> Add Another Milestone</button>
+            <button>
+              <FaPlus /> Add Another Milestone
+            </button>
           </div>
         </div>
 
@@ -71,22 +75,26 @@ const ShotForm = () => {
           ></textarea>
         </div>
         <div className="file-container">
-          <p>Attach files <small> (Optional)</small></p>
-        <div className="file">
-          <button><FaPaperclip /> Attach Files</button>
+          <p>
+            Attach files <small> (Optional)</small>
+          </p>
+
+          <label htmlFor="filedocs">
+            <FaPaperclip /> Attach File
             <input
               type="file"
               name="file"
+              accept=".pdf, .docx"
               id="filedocs"
-              onChange={changeHandler}
+              onChange={onChangeFile}
             />
-        </div>
+          </label>
         </div>
         <button type="submit" className="submit-btn" onClick={handleSubmit}>
           submit
         </button>
       </form>
-    </div>
+    </section>
   );
 };
 

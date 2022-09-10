@@ -4,3 +4,32 @@
   max-height: 100vh;
   overflow: hidden;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Nunito', sans-serif;
+  font-size: normal;
+}
+p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+}
+input {
+  border: none;
+  outline: none;
+}
+input:focus {
+  /* outline: .2px solid rgb(58, 83, 104); */
+}
+
+/* ==============================
+    mobile screen is not ready
+    ============================== */
+@media (max-width: 768px) {
+  .App {
+    display: none;
+  }
+}

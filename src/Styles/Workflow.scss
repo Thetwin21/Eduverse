@@ -1,12 +1,19 @@
-@import "./dashboardUI/edulance.scss";
+@import "./dashboardUI/Edulance/edulance.scss";
 @import "./dashboardUI/Sidebar.scss";
+// navcontainer
 @import "./dashboardUI/Nav/navbar.scss";
-@import "./dashboardUI/Filter.scss";
-@import "./dashboardUI/post.scss";
 @import "./dashboardUI/Nav/navProfile.scss";
-@import "./dashboardUI/ShootShot/ShotPage.scss";
-@import "./dashboardUI/ShootShot/ShotForm.scss";
-@import "./dashboardUI/ShootShot/Period.scss";
+//edulance
+@import "./dashboardUI/Edulance/Filter.scss";
+@import "./dashboardUI/Edulance/post.scss";
+@import "./dashboardUI/Edulance/ShootShot/ShotPage.scss";
+@import "./dashboardUI/Edulance/ShootShot/ShotForm.scss";
+@import "./dashboardUI/Edulance/ShootShot/Period.scss";
+//community
+@import "./dashboardUI/Community/Community.scss";
+@import "./dashboardUI/Community/Post/Postshare.scss";
+@import "./dashboardUI/Community/Post/PostUploads.scss";
+@import "./dashboardUI/Community/Events/EventsContainer.scss";
 
 *,
 ::after ,

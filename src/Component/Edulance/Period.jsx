@@ -2,7 +2,7 @@ import React from "react";
 
 const Period = ({post}) => {
   return (
-    <div className="period">
+    <section className="period">
       <div className="date">
         <p>Date posted</p>
         <p className="date-details">{post.time}</p>
@@ -38,12 +38,12 @@ const Period = ({post}) => {
           </div>
         </div>
         <div className="prof">
-          {post.profession.map((data) => (
-            <p>{data}</p>
+          {post.profession.map((data,index) => (
+            <p key={index}>{data}</p>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
