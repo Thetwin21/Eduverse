@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { BsCart3, BsPeople }from 'react-icons/bs';
 import { ImStack }from 'react-icons/im';
 import { HiOutlineLibrary }from 'react-icons/hi';

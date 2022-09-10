@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from '../NavComponent/Navbar';
 import EventContainer from './EventContainer';
 import PostShare from './PostShare';
 import PostUploads from './PostUploads';
 
 const Community = () => {
-  const [getPostId, setGetPostId] = useState(null)
+  // const [getPostId, setGetPostId] = useState(null)
   return (
     <section className='community'>
       <Navbar />

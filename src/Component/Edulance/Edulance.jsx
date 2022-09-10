@@ -5,7 +5,6 @@ import { posts } from "../Data/Data";
 import Post from "./Post";
 import { useState } from "react";
 import ShotPage from "./ShotPage";
-import { useRef } from "react";
 
 const Edulance = () => {
   const [aShot, shootAshot] = useState(true);

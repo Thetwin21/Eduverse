@@ -9,7 +9,7 @@ const ShotForm = () => {
   const onChangeFile = (event) => {
     if (event.target.files && event.target.files[0]) {
       const file = event.target.files[0];
-      setGetFile({
+      setGetFile({getFile,
         file: URL.createObjectURL(file),
       });
     }
