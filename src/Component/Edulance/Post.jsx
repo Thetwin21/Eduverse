@@ -1,7 +1,9 @@
 import React from "react";
 
 const Post = ({ post, onClick, ref }) => {
+
   const profession = post.profession;
+  
   return (
     <section
       className="job-post-container"
@@ -21,7 +23,7 @@ const Post = ({ post, onClick, ref }) => {
         <p className="text">{post.text}</p>
         <div className="btns">
           {profession.map((data) => (
-            <p>{data}</p>
+            <p className="prof-data">{data}</p>
           ))}
         </div>
       </div>

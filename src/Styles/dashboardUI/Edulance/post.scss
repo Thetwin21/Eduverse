@@ -34,9 +34,11 @@
       }
       .btns {
         display: flex;
+        // flex-wrap: wrap;
         width: 100%;
         gap: 1em;
-        p {
+        .prof-data {
+          font-size: var(--h5);
           padding: 3px 8px;
           padding-bottom: 4px;
           background: #bfd3fa28;

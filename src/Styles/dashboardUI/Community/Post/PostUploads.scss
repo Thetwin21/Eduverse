@@ -1,11 +1,10 @@
 .post-uploads {
-
   .post {
     display: flex;
     border-radius: 0;
     margin-bottom: 2rem;
     padding: 15px;
-    background-color: var(--p-backgroundColor);
+    background: var(--color-white);
     margin-bottom: 1rem;
     gap: 0.5rem;
     .profileImg {

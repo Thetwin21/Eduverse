@@ -7,8 +7,8 @@ export const posts = [
     time: "1hr",
     projectName:
       "Design and construction of control panel for marine diesel engine",
-    text: "I am looking for who to help me work on my final year project, the topic is design and construction of control panel for marine diesel engine",
-    profession: ["mechanical Engineering","marine Engineering"],
+    text: "I am looking for who to help me work on my final year project, the topic is design and construction of control panel for marine diesel engine.",
+    profession: ["mechanical Engineering", "marine Engineering"],
     amt: "10,000",
   },
   {
@@ -20,7 +20,7 @@ export const posts = [
     projectName:
       "Design and construction of control panel for marine diesel engine",
     text: "I am looking for who to help me work on my final year project, the topic is design and construction of control panel for marine diesel engine",
-    profession: ["mechanical Engineering","marine Engineering"],
+    profession: ["mechanical Engineering", "marine Engineering"],
     amt: "10,000",
   },
   {
@@ -32,7 +32,7 @@ export const posts = [
     projectName:
       "Design and construction of control panel for marine diesel engine",
     text: "I am looking for who to help me work on my final year project, the topic is design and construction of control panel for marine diesel engine",
-    profession: ["mechanical Engineering","marine Engineering"],
+    profession: ["mechanical Engineering", "marine Engineering"],
     amt: "10,000",
   },
   {
@@ -44,7 +44,7 @@ export const posts = [
     projectName:
       "Design and construction of control panel for marine diesel engine",
     text: "I am looking for who to help me work on my final year project, the topic is design and construction of control panel for marine diesel engine",
-    profession: ["mechanical Engineering","marine Engineering"],
+    profession: ["mechanical Engineering", "marine Engineering"],
     amt: "10,000",
   },
   {
@@ -56,7 +56,7 @@ export const posts = [
     projectName:
       "Design and construction of control panel for marine diesel engine",
     text: "I am looking for who to help me work on my final year project, the topic is design and construction of control panel for marine diesel engine",
-    profession: ["mechanical Engineering","marine Engineering"],
+    profession: ["mechanical Engineering", "marine Engineering"],
     amt: "10,000",
   },
   {
@@ -68,7 +68,7 @@ export const posts = [
     projectName:
       "Design and construction of control panel for marine diesel engine",
     text: "I am looking for who to help me work on my final year project, the topic is design and construction of control panel for marine diesel engine",
-    profession: ["mechanical Engineering","marine Engineering"],
+    profession: ["mechanical Engineering", "marine Engineering"],
     amt: "10,000",
   },
   {
@@ -80,7 +80,7 @@ export const posts = [
     projectName:
       "Design and construction of control panel for marine diesel engine",
     text: "I am looking for who to help me work on my final year project, the topic is design and construction of control panel for marine diesel engine",
-    profession: ["mechanical Engineering","marine Engineering"],
+    profession: ["mechanical Engineering", "marine Engineering"],
     amt: "10,000",
   },
   {
@@ -92,7 +92,7 @@ export const posts = [
     projectName:
       "Design and construction of control panel for marine diesel engine",
     text: "I am looking for who to help me work on my final year project, the topic is design and construction of control panel for marine diesel engine",
-    profession: ["mechanical Engineering","marine Engineering"],
+    profession: ["mechanical Engineering", "marine Engineering"],
     amt: "10,000",
   },
   {
@@ -104,7 +104,7 @@ export const posts = [
     projectName:
       "Design and construction of control panel for marine diesel engine",
     text: "I am looking for who to help me work on my final year project, the topic is design and construction of control panel for marine diesel engine",
-    profession: ["mechanical Engineering","marine Engineering"],
+    profession: ["mechanical Engineering", "marine Engineering"],
     amt: "10,000",
   },
   {
@@ -116,7 +116,7 @@ export const posts = [
     projectName:
       "Design and construction of control panel for marine diesel engine",
     text: "I am looking for who to help me work on my final year project, the topic is design and construction of control panel for marine diesel engine",
-    profession: ["mechanical Engineering","marine Engineering"],
+    profession: ["mechanical Engineering", "marine Engineering"],
     amt: "10,000",
   },
   {
@@ -127,8 +127,8 @@ export const posts = [
     time: "2 days",
     projectName:
       "Design and construction of control panel for marine diesel engine",
-    text: "I am looking for who to help me work on my final year project, the topic is design and construction of control panel for marine diesel engine",
-    profession: ["mechanical Engineering","marine Engineering"],
+    text: "I am looking for who to help me work on my final year project, the topic is design and construction of control panel for marine diesel engine.",
+    profession: ["mechanical Engineering", "marine Engineering"],
     amt: "10,000",
   },
 ];

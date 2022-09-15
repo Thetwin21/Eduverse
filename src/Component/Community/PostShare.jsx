@@ -1,12 +1,13 @@
 import React, { useRef, useState } from "react";
-import { FaCalendar, FaVideo } from "react-icons/fa";
-import { MdPhoto } from "react-icons/md";
+import ShBtn from "./ShBtn";
 // import {}
 
 const PostShare = () => {
   const [photos, getPhotos] = useState(null);
   const [videos, getVideos] = useState(null);
   const [eventFiles, getEventFiles] = useState(null);
+  const [inputContent, setInputContent] = useState("");
+
   const photoRef = useRef();
   const videoRef = useRef();
   const eventRef = useRef();
@@ -32,55 +33,94 @@ const PostShare = () => {
       getEventFiles({ eventFiles, events: URL.createObjectURL(eventFile) });
     }
   };
+
+  // when clicked
+
+  const onClickImg = () => {
+    photoRef.current.click();
+    getVideos(null);
+  };
+
+  const onClickVideo = () => {
+    videoRef.current.click();
+    getPhotos(null);
+  };
+  const onClickEvent = () => {
+    eventRef.current.click();
+  };
+
+  // get inputContent for post
+  const onChangeContent = (e) => {
+    setInputContent(e.target.value);
+  };
+
   return (
-    <section className="post-share">
-      <img src="../Asset/profileImg.png" className="profile-img" alt="" />
-      <div className="sh-content">
-        <input type="search" name="" id="" placeholder="write something" />
-        <div className="sh-items">
-          <div className="photo" onClick={() => photoRef.current.click()}>
-            <MdPhoto />
-            <p>Photo</p>
-            <input
-              type="file"
-              name="photoFile"
-              ref={photoRef}
-              onChange={onGetPhoto}
-              accept="image/png, image/gif, image/jpeg"
-              id="file"
-              style={{ display: "none" }}
-            />
-          </div>
+    <section className="post_share_container">
+      <section className="post_share">
+        <img src="../Asset/profileImg.png" className="profile_img" alt="" />
 
-          <div className="video" onClick={() => videoRef.current.click()}>
-            <FaVideo /> <p>Video</p>
-            <input
-              type="file"
-              name="videoFile"
-              ref={videoRef}
-              onChange={onGetVideo}
-              accept="video/mp4 , video/x-mp4,video/*"
-              id="file"
-              style={{ display: "none" }}
+        {photos || videos ? (
+          <div className="img_preview">
+            <div className="preview_nav">
+              <h3>Post on your wall</h3>
+            </div>
+            <textarea
+              value={inputContent}
+              id=""
+              onChange={onChangeContent}
+              placeholder="Write something"
+            ></textarea>
+            {videos ? (
+              <video controls width="90%">
+                <source src={videos.video} type="video/mp4" width="100%" />
+                Your browser does not suppoort
+              </video>
+            ) : (
+              <img src={photos.photo} alt="" />
+            )}
+            <ShBtn
+              onClickImg={onClickImg}
+              onClickVideo={onClickVideo}
+              onClickEvent={onClickEvent}
             />
+            <button className="tag_friends">Tag friends</button>
+            <div className="post_btn">
+              <button className="cancel">cancel</button>
+              <button>Post</button>
+            </div>
           </div>
+        ) : (
+          <div className="sh_content">
+            <input type="search" name="" id="" placeholder="write something" />
 
-          <div className="event" onClick={() => eventRef.current.click()}>
-            <FaCalendar />
-            <p>Events</p>
-            <input
-              type="file"
-              name="eventFile"
-              ref={eventRef}
-              onChange={onGetEvent}
-              id="file"
-              style={{ display: "none" }}
+            <ShBtn
+              onClickImg={onClickImg}
+              onClickVideo={onClickVideo}
+              onClickEvent={onClickEvent}
             />
           </div>
-        </div>
-      </div>
+        )}
+        <input
+          type="file"
+          name="photoFile"
+          ref={photoRef}
+          onChange={onGetPhoto}
+          accept="image/png, image/gif, image/jpeg"
+          id="file"
+          style={{ display: "none" }}
+        />
+        <input
+          type="file"
+          name="videoFile"
+          ref={videoRef}
+          onChange={onGetVideo}
+          accept="video/mp4 , video/x-mp4,video/*"
+          id="file"
+          style={{ display: "none" }}
+        />
+      </section>
     </section>
   );
 };
 
-export default PostShare;
+export default React.memo(PostShare);

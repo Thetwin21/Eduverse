@@ -1,13 +1,18 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { FaHeart } from "react-icons/fa";
 import { AiFillMessage } from "react-icons/ai";
 import { BsArrow90DegRight } from "react-icons/bs";
-import { uploads } from "../Data/uploads";
+import { allUploadPost } from "../../features/community/compostSlice";
+// import { uploads } from "../Data/uploads";
 
 const PostUploads = ({onClick}) => {
+  const postUploads = useSelector(allUploadPost);
+  console.log(postUploads);
+
   return (
     <section className="post-uploads">
-      {uploads && uploads.map((post) => (
+      {postUploads && postUploads.map((post) => (
         <div className="post" key={post.id} onClick={onClick}>
           <img src={post.imgProfile} alt="" className="profileImg" />
           <div className="profile-content">
@@ -20,6 +25,8 @@ const PostUploads = ({onClick}) => {
             </div>
             <div className="post-desc">{post.desc}</div>
             {post.imgPost.length !== 0 && <img src={post.imgPost} alt="" />}
+            {post.vidPost.length !== 0 && <video>
+              <source src={post.vidPost} type="" /></video>}
             <div className="reactions">
               <div className="likes-container">
                 <span>3.1k</span>
