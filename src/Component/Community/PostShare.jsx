@@ -5,7 +5,6 @@ import ShBtn from "./ShBtn";
 const PostShare = () => {
   const [photos, getPhotos] = useState(null);
   const [videos, getVideos] = useState(null);
-  const [eventFiles, getEventFiles] = useState(null);
   const [inputContent, setInputContent] = useState("");
 
   const photoRef = useRef();
