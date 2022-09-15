@@ -26,13 +26,6 @@ const PostShare = () => {
       getVideos({ videos, video: URL.createObjectURL(videoFile) });
     }
   };
-  // get event
-  const onGetEvent = (event) => {
-    if (event.target.files && event.target.files[0]) {
-      const eventFile = event.target.files[0];
-      getEventFiles({ eventFiles, events: URL.createObjectURL(eventFile) });
-    }
-  };
 
   // when clicked
 
