@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 // import { nanoid } from "@reduxjs/toolkit";
 // import { postPosts } from "../../features/community/compostSlice";
 import ShBtn from "./ShBtn";
