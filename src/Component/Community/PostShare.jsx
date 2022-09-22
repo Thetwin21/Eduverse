@@ -1,13 +1,13 @@
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-import { nanoid } from "@reduxjs/toolkit";
-import { postPosts } from "../../features/community/compostSlice";
+// import { nanoid } from "@reduxjs/toolkit";
+// import { postPosts } from "../../features/community/compostSlice";
 import ShBtn from "./ShBtn";
 
 const PostShare = ({ handleIsEvent }) => {
   const [textareaHight, setTextareaHight] = useState(7);
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const [photos, getPhotos] = useState(null);
   const [videos, getVideos] = useState(null);
   const [inputContent, setInputContent] = useState("");
@@ -59,7 +59,7 @@ const PostShare = ({ handleIsEvent }) => {
     getPhotos(null);
     getVideos(null);
   };
-  
+
   // onSavePost => post pushed to the database
   // const onSavePost = () => {
   //   if (inputContent || photos || videos) {
