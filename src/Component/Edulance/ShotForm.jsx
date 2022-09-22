@@ -4,6 +4,7 @@ import { FaPaperclip, FaPlus } from "react-icons/fa";
 
 const ShotForm = () => {
   const [getFile, setGetFile] = useState(null);
+  const [textareaHight, setTextareaHight] = useState(1)
 
   //get the file info
   const onChangeFile = (event) => {
@@ -15,6 +16,18 @@ const ShotForm = () => {
     }
   };
 
+// textarea handler
+  const handleChange = (event) => {
+    const height = event.target.scrollHeight;
+    const rows = event.target.rows;
+    const rowHeight = 17;
+    const tRows = Math.ceil(height/ rowHeight) - 1 ;
+    if(tRows > rows){
+      setTextareaHight(tRows)
+    }
+  }
+
+  //  handle onSubmit
   const handleSubmit = () => {};
 
   return (
@@ -69,9 +82,9 @@ const ShotForm = () => {
           <textarea
             name=""
             id=""
-            cols="30"
-            rows="10"
+            rows={textareaHight}
             placeholder="write message"
+            onChange={handleChange}
           ></textarea>
         </div>
         <div className="file-container">
@@ -98,4 +111,4 @@ const ShotForm = () => {
   );
 };
 
-export default ShotForm;
+export default React.memo(ShotForm);

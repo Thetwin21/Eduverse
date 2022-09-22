@@ -8,7 +8,6 @@ import { allUploadPost } from "../../features/community/compostSlice";
 
 const PostUploads = ({onClick}) => {
   const postUploads = useSelector(allUploadPost);
-  console.log(postUploads);
 
   return (
     <section className="post-uploads">

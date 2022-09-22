@@ -54,19 +54,24 @@ $-borderRadius: 0.5em;
         gap: var(--space-2);
         input {
           width: 50%;
-          padding: .8em;
-          text-indent: 10px;
-          background: $inputBackgroundColor;
-          border: none;
-          border-radius: $-borderRadius;
+          background: #c8daff17;
+          padding: var(--padding-1);
+          border: 0.2px solid #c8daffd6;
+          border-radius: var(--space-1);
+          text-indent: 5px;
+          outline: 0.5px lighten($color: #000000, $amount: 0) var(--color-gray);
+
+          ::placeholder {
+            color: #9696b4;
+          }
         }
       }
       button {
         align-self: flex-start;
         background-color: transparent;
-        color: #004B82;
+        color: #004b82;
         border: none;
-        padding:var(--space-2);
+        padding: var(--space-2);
         cursor: pointer;
       }
     }
@@ -84,7 +89,7 @@ $-borderRadius: 0.5em;
         color: #000;
       }
       p {
-        font-size: .8rem;
+        font-size: 0.8rem;
         font-weight: 400;
         color: #667085;
       }
@@ -107,10 +112,17 @@ $-borderRadius: 0.5em;
     textarea {
       width: 100%;
       background: $inputBackgroundColor;
-      border-radius: $-borderRadius;
-      border: none;
-      padding: $-smallGap;
-      margin: $-smallGap;
+      color: var(--color-black);
+      margin: var(--space-3);
+      padding: var(--padding-1);
+      border: 0.2px solid #c8daffd6;
+      border-radius: var(--space-1);
+      text-indent: 5px;
+      outline: 0.5px lighten($color: #000000, $amount: 0) var(--color-gray);
+
+      ::placeholder {
+        color: #9696b4;
+      }
     }
   }
   .file-container {

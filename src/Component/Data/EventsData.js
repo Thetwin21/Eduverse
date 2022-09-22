@@ -1,21 +1,44 @@
 export const eventsData = [
   {
     id: 1,
-    time: "Fri, Aug 20, 09:00AM",
-    eventName: "Africa real estate summit, Awards & Expo",
-    location: "Lagos oriental hotel",
+    name: "",
+    username: "",
+    day:"Friday",
+    month: "August",
+    time:"9:00",
+    eventTitle: "Africa real estate summit, Awards & Expo",
+    eventDescrption: "It will be a devlead bootcamp for frontend developer",
+    venue: "Lagos oriental hotel",
+    ticketlink: "",
+    flierUrl: "C:\Users\SYLVESTER\Desktop\eduverse-d\public\Asset\eventflier.png"
   },
   {
     id: 2,
-    time: "Fri, Aug 22, 09:00AM",
-    eventName: "seminar on building an online business",
-    location: "online",
+    name: "",
+    username: "",
+    day:"Friday",
+    month: "August",
+    time:"9:00",
+    eventTitle: "seminar on building an online business",
+    eventDescrption:"The Seventh cohort for data upcoming analyst",
+    venue: "online",
+    ticketlink: "",
+    flierUrl: ""
   },
   {
     id: 3,
-    time: "Thu, Sep 8, 10:00AM",
-    eventName: "Zylus goldvest strategic meetings",
-    location: "Lagos oriental hotel",
+    name: "",
+    username: "",
+    day:"Friday",
+    month: "August",
+    time:"9:00",
+    eventTitle: "Zylus goldvest strategic meetings",
+    eventDescrption: [
+    " Serving Customers Right is a Mapemond Original Course."," About This Course"," This course is for career men/women, business men/women and also students who are passionate about building sustainable customer relationships."," This course is in partnership with Richard & Malcom consulting. All areas regarding customer services and relationships with be addressed.", "Course Outline ", " 1. Building Solid Relationships "," 2. Creating the Right Experience "," 3. Customer Retention Strategies ",
+    " 4. And More… "],
+    venue: "Lagos oriental hotel",
+    ticketlink: "",
+    flierUrl: "../Asset/eventflier.png"
   },
 ];
 

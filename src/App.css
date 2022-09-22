@@ -21,8 +21,14 @@ input {
   border: none;
   outline: none;
 }
-input:focus {
-  /* outline: .2px solid rgb(58, 83, 104); */
+input::placeholder {
+  color: #9696B4;
+}
+textarea {
+  resize: none;
+  color: #9696B4;
+  background: #c8daff17;
+  border: 0.2px solid #c8daffd6;
 }
 
 /* ==============================

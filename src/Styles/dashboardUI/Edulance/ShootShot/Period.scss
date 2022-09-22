@@ -1,8 +1,9 @@
 .period {
   position: -webkit-sticky;
   position: sticky;
+  width: 100%;
   top: 0;
-  background: var(--p-backgroundColor);
+  background: var(--color-white);
   padding: 1.2em;
   border-radius: 10px;
   z-index: 2;

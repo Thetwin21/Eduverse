@@ -9,12 +9,12 @@
   --bColor: #bfd3fa28;
   --p-color: #667085;
   --btnColor: #0089ed;
-  --color-link: #1971c2;
-  --color-brand-rgb: 233, 30, 99;
-  --color-black: #172b4d;
+  --ash-background-btn: #EBEEF2;
+
+  --color-black: #000;
   --color-white: #fff;
   --color-gray: #667085;
-  --sidebar-width: 18rem;
+  --sidebar-width: 19rem;
   --border-radius-md: 6px;
   --border-width: 1px;
   --border-radius: 3px;
@@ -24,10 +24,15 @@
   --space-3: 1rem;
   --space-4: 2rem;
   /* width */
-  --width-1: 24rem;
-  --width-2: 32rem;
-  --width-3: 48rem;
-  --width-4: 64rem;
+  --width-0: 16rem;
+  --width-1: 18rem;
+  --width-2: 24rem;
+  --width-3: 32rem;
+  /* padding */
+  --padding-1: 0.5rem;
+  --padding-2: 0.75rem;
+  --padding-3: 1rem;
+  --padding-4: 1.2rem;
   /* line height */
   --line-height-1: 1;
   --line-height-2: 1.125;

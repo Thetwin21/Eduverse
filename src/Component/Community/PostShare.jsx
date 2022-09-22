@@ -1,15 +1,19 @@
 import React, { useRef, useState } from "react";
+import { useDispatch } from "react-redux";
+import { nanoid } from "@reduxjs/toolkit";
+import { postPosts } from "../../features/community/compostSlice";
 import ShBtn from "./ShBtn";
-// import {}
 
-const PostShare = () => {
+const PostShare = ({ handleIsEvent }) => {
+  const [textareaHight, setTextareaHight] = useState(7);
+
+  const dispatch = useDispatch();
   const [photos, getPhotos] = useState(null);
   const [videos, getVideos] = useState(null);
   const [inputContent, setInputContent] = useState("");
 
   const photoRef = useRef();
   const videoRef = useRef();
-  const eventRef = useRef();
 
   // get image file
   const onGetPhoto = (event) => {
@@ -26,91 +30,122 @@ const PostShare = () => {
     }
   };
 
-  // when clicked
-
+  // when image icon is clicked
   const onClickImg = () => {
     photoRef.current.click();
     getVideos(null);
   };
-
+  // when video icon is clicked
   const onClickVideo = () => {
     videoRef.current.click();
     getPhotos(null);
   };
-  const onClickEvent = () => {
-    eventRef.current.click();
-  };
+
 
   // get inputContent for post
-  const onChangeContent = (e) => {
-    setInputContent(e.target.value);
+  const onChangeContent = (event) => {
+    const height = event.target.scrollHeight;
+    const rows = event.target.rows;
+    const rowHeight = 17;
+    const tRows = Math.ceil(height / rowHeight) - 1;
+    if (tRows > rows) {
+      setTextareaHight(tRows);
+    }
+    setInputContent(event.target.value);
   };
 
+  // cancel posting
+  const cancelPost = () => {
+    getPhotos(null);
+    getVideos(null);
+  };
+
+  // onSavePost => post pushed to the database
+  const onSavePost = () => {
+    if (inputContent || photos || videos) {
+      dispatch(
+        postPosts({
+          id: nanoid,
+          inputContent,
+          photos,
+          videos,
+        })
+      );
+    }
+  };
   return (
     <section className="post_share_container">
-      <section className="post_share">
-        <img src="../Asset/profileImg.png" className="profile_img" alt="" />
-
-        {photos || videos ? (
-          <div className="img_preview">
-            <div className="preview_nav">
-              <h3>Post on your wall</h3>
-            </div>
-            <textarea
-              value={inputContent}
-              id=""
-              onChange={onChangeContent}
-              placeholder="Write something"
-            ></textarea>
-            {videos ? (
-              <video controls width="90%">
-                <source src={videos.video} type="video/mp4" width="100%" />
-                Your browser does not suppoort
-              </video>
-            ) : (
-              <img src={photos.photo} alt="" />
-            )}
-            <ShBtn
-              onClickImg={onClickImg}
-              onClickVideo={onClickVideo}
-              onClickEvent={onClickEvent}
-            />
-            <button className="tag_friends">Tag friends</button>
-            <div className="post_btn">
-              <button className="cancel">cancel</button>
-              <button>Post</button>
-            </div>
+      {photos || videos ? (
+        <div className="post_preview">
+          <div className="preview_nav">
+            <h3>Post on your wall</h3>
           </div>
-        ) : (
+          <textarea
+            rows={textareaHight}
+            value={inputContent}
+            id=""
+            onChange={onChangeContent}
+            placeholder="Write something"
+          ></textarea>
+          {videos ? (
+            <video controls width="90%">
+              <source src={videos.video} type="video/mp4" width="100%" />
+              Your browser does not suppoort
+            </video>
+          ) : (
+            <img src={photos.photo} alt="" />
+          )}
+          <ShBtn
+            onClickImg={onClickImg}
+            onClickVideo={onClickVideo}
+            onClickEvent={ handleIsEvent}
+          />
+          <button className="tag_friends">Tag friends</button>
+          <div className="post_btn">
+            <button className="cancel" onClick={cancelPost}>
+              cancel
+            </button>
+            <button>Post</button>
+          </div>
+        </div>
+      ) : (
+        <section className="post_share">
+          <img src="../Asset/profileImg.png" className="profile_img" alt="" />
+
           <div className="sh_content">
             <input type="search" name="" id="" placeholder="write something" />
 
             <ShBtn
               onClickImg={onClickImg}
               onClickVideo={onClickVideo}
-              onClickEvent={onClickEvent}
+              onClickEvent={ handleIsEvent }
             />
           </div>
-        )}
-        <input
-          type="file"
-          name="photoFile"
-          ref={photoRef}
-          onChange={onGetPhoto}
-          accept="image/png, image/gif, image/jpeg"
-          id="file"
-          style={{ display: "none" }}
-        />
-        <input
-          type="file"
-          name="videoFile"
-          ref={videoRef}
-          onChange={onGetVideo}
-          accept="video/mp4 , video/x-mp4,video/*"
-          id="file"
-          style={{ display: "none" }}
-        />
-      </section>
+        </section>
+      )}
+
+      {/* input file for image */}
+      <input
+        type="file"
+        name="photoFile"
+        ref={photoRef}
+        onChange={onGetPhoto}
+        accept="image/png, image/gif, image/jpeg"
+        multiple={true}
+        id="file"
+        style={{ display: "none" }}
+      />
+      {/* input file for video */}
+      <input
+        type="file"
+        name="videoFile"
+        ref={videoRef}
+        onChange={onGetVideo}
+        accept="video/mp4 , video/x-mp4,video/*"
+        multiple={true}
+        id="file"
+        style={{ display: "none" }}
+      />
     </section>
   );
 };

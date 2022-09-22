@@ -6,8 +6,13 @@ const initialState = uploadsData;
 const composeSlice = createSlice({
   name: 'uploads',
   initialState,
-  reducers: {}
+  reducers: {
+    postPosts(state, action) {
+      state.push(action.payload)
+    } 
+  }
 })
 
 export const allUploadPost = (state) => state.uploads;
+export const {postPosts} = composeSlice.actions;
 export default composeSlice.reducer;
