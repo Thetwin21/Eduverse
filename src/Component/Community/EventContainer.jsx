@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux"; // usePatch will be in the postEvent component
 import { allEventPosts } from "../../features/Events/EventSlice";
 import { allComUpload } from "../../features/Events/YourComSlice";

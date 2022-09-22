@@ -1,6 +1,5 @@
 // your Community Slice
 import { createSlice } from "@reduxjs/toolkit";
-import { useState } from "react";
 import { communities } from "../../Component/Data/EventsData";
 
 const initialState = communities;

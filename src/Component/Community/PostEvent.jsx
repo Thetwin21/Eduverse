@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MdCancel, MdImage } from "react-icons/md";
+import { MdCancel } from "react-icons/md";
 import Dragdrop from "./Dragdrop";
 
 const PostEvent = ({ backToComPag }) => {

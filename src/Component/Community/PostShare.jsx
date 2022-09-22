@@ -59,20 +59,20 @@ const PostShare = ({ handleIsEvent }) => {
     getPhotos(null);
     getVideos(null);
   };
-
+  
   // onSavePost => post pushed to the database
-  const onSavePost = () => {
-    if (inputContent || photos || videos) {
-      dispatch(
-        postPosts({
-          id: nanoid,
-          inputContent,
-          photos,
-          videos,
-        })
-      );
-    }
-  };
+  // const onSavePost = () => {
+  //   if (inputContent || photos || videos) {
+  //     dispatch(
+  //       postPosts({
+  //         id: nanoid,
+  //         inputContent,
+  //         photos,
+  //         videos,
+  //       })
+  //     );
+  //   }
+  // };
   return (
     <section className="post_share_container">
       {photos || videos ? (
