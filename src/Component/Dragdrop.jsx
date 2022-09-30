@@ -9,7 +9,6 @@ const DragDrop = () => {
   const inputRef = useRef(null);
   const [files, handleFiles] = useState(null);
 
-
   // handle drag events
   const handleDrag = function (e) {
     e.preventDefault();
@@ -66,11 +65,10 @@ const DragDrop = () => {
       >
         <MdImage />
         <div>
-        <button className="upload-button" onClick={onButtonClick}>
+          <button className="upload-button" onClick={onButtonClick}>
             click
           </button>
           <p> or drag to upload event poster</p>
-          
         </div>
       </label>
       {dragActive && (

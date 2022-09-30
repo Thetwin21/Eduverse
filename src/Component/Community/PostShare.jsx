@@ -1,10 +1,11 @@
 import React, { useRef, useState } from "react";
-// import { useDispatch } from "react-redux";
-// import { nanoid } from "@reduxjs/toolkit";
-// import { postPosts } from "../../features/community/compostSlice";
+import { useDispatch } from "react-redux";
+import { nanoid } from "@reduxjs/toolkit";
+import { postPosts } from "../../features/community/compostSlice";
 import ShBtn from "./ShBtn";
 
 const PostShare = ({ handleIsEvent }) => {
+  const dispatch = useDispatch();
   const [textareaHight, setTextareaHight] = useState(7);
 
   // const dispatch = useDispatch();
@@ -41,7 +42,6 @@ const PostShare = ({ handleIsEvent }) => {
     getPhotos(null);
   };
 
-
   // get inputContent for post
   const onChangeContent = (event) => {
     const height = event.target.scrollHeight;
@@ -73,6 +73,56 @@ const PostShare = ({ handleIsEvent }) => {
   //     );
   //   }
   // };
+  const onSavePost = () => {
+    if (photos !== null) {
+      dispatch(
+        postPosts({
+          id: nanoid(),
+          imgProfile: "",
+          name: "Olivia Rhyne",
+          username: "@amuluonyenego",
+          timePosted: "3 hours",
+          imgPost: photos.photo,
+          desc: inputContent,
+          vidPost: "",
+          likes: 234,
+          liked: false,
+        })
+      );
+      getPhotos(null)
+    } else if (videos !== null) {
+      dispatch(
+        postPosts({
+          id: nanoid(),
+          imgProfile: "",
+          name: "Olivia Rhyne",
+          username: "@amuluonyenego",
+          timePosted: "3 hours",
+          imgPost: photos,
+          desc: inputContent,
+          vidPost: videos.video,
+          likes: 234,
+          liked: false,
+        })
+      );
+      getVideos(null)
+    } else if (videos === null && photos === null && inputContent !== "") {
+      dispatch(
+        postPosts({
+          id: nanoid(),
+          imgProfile: "",
+          name: "Olivia Rhyne",
+          username: "@amuluonyenego",
+          timePosted: "3 hours",
+          imgPost: "",
+          desc: inputContent,
+          vidPost: "",
+          likes: 234,
+          liked: false,
+        })
+      );
+    }
+  };
   return (
     <section className="post_share_container">
       {photos || videos ? (
@@ -81,7 +131,7 @@ const PostShare = ({ handleIsEvent }) => {
             <h3>Post on your wall</h3>
           </div>
           <textarea
-            rows={textareaHight}
+            cols={textareaHight}
             value={inputContent}
             id=""
             onChange={onChangeContent}
@@ -98,14 +148,14 @@ const PostShare = ({ handleIsEvent }) => {
           <ShBtn
             onClickImg={onClickImg}
             onClickVideo={onClickVideo}
-            onClickEvent={ handleIsEvent}
+            onClickEvent={handleIsEvent}
           />
           <button className="tag_friends">Tag friends</button>
           <div className="post_btn">
             <button className="cancel" onClick={cancelPost}>
               cancel
             </button>
-            <button>Post</button>
+            <button onClick={onSavePost}>Post</button>
           </div>
         </div>
       ) : (
@@ -118,7 +168,7 @@ const PostShare = ({ handleIsEvent }) => {
             <ShBtn
               onClickImg={onClickImg}
               onClickVideo={onClickVideo}
-              onClickEvent={ handleIsEvent }
+              onClickEvent={handleIsEvent}
             />
           </div>
         </section>

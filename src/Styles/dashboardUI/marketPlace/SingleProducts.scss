@@ -1,0 +1,103 @@
+.single_product_container {
+  padding: 0 var(--space-4);
+  overflow-y: auto;
+  height: calc(100vh - 4rem);
+  //   button after navbar
+  > .btn_container {
+    margin: var(--space-2) 0;
+    button {
+      display: flex;
+      padding: 0.8em 1.2em;
+      border: none;
+      align-items: center;
+      border-radius: 5px;
+      cursor: pointer;
+      gap: 0.2em;
+      background: var(--ash-background-btn);
+    }
+  }
+
+  //   single product
+  .single_product {
+    display: grid;
+    grid-template-columns: auto 12rem;
+    gap: var(--space-3);
+    line-height: var(--line-height-3);
+
+    }
+    .payment_section {
+      padding: 0 10px;
+      box-sizing: border-box;
+      img {
+        width: 100%;
+        height: 12rem;
+        border-radius: 5px;
+      }
+      .purchase_btn,
+      .make_offer {
+        width: 100%;
+        height: 2rem;
+        font-size: var(--h6);
+        border-radius: 2px;
+        //padding: 10px 20px;
+        border: 2px solid var(--btnColor);
+        background: var(--color-white);
+        color: var(--btnColor);
+        cursor: pointer;
+      }
+      .purchase_btn {
+        background: var(--btnColor);
+        color: var(--color-white);
+        margin: var(--space-2) 0;
+        border: none;
+      }
+    }
+  }
+
+.single_product_container::-webkit-scrollbar {
+  width: 2px;
+}
+
+// .similar_books {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   gap: var(--space-3);
+//   padding: var(--padding-2);
+//   .book {
+//     position: relative;
+//     .isFree {
+//       position: absolute;
+//       background: var(--color-white);
+//       padding: 1px 2px;
+//       border-radius: 2px;
+//       font-size: var(--h6);
+//       font-weight: 600;
+//       right: 3%;
+//       top: 4%;
+//       z-index: 99;
+//     }
+//     .img {
+//       width: 100%;
+//       height: 6rem;
+//       border-radius: 10px;
+//       margin-bottom: var(--space-2);
+//       overflow: hidden;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//       }
+//     }
+//     .details {
+//       cursor: pointer;
+//       .title {
+//         font-size: var(--h6);
+//         font-weight: 600;
+//       }
+//       .author {
+//         font-size: var(--h6);
+//         color: var(--color-gray);
+//       }
+//     }
+//   }
+// }

@@ -6,10 +6,12 @@ import PostShare from "./PostShare";
 import PostUploads from "./PostUploads";
 import { allEventPosts } from "../../features/Events/EventSlice";
 import { useSelector } from "react-redux";
+import { IoIosArrowBack } from "react-icons/io";
+import CardProfile from "../CardProfile";
 
 const Community = () => {
-  const [eventId, setEventId] = useState(3);
   const eventsData = useSelector(allEventPosts);
+  const [eventId, setEventId] = useState("");
   // const [getPostId, setGetPostId] = useState(null)
   const [isEvent, setIsEvent] = useState(false);
   // to toggle isEvent
@@ -22,6 +24,8 @@ const Community = () => {
   const backToPage = () => {
     setEventId("");
   };
+
+  const eventPost = eventsData[eventId - 1];
   return (
     <section className="community">
       <Navbar />
@@ -42,59 +46,59 @@ const Community = () => {
       ) : (
         <section className="each-event-container">
           <nav className="event-nav">
-            <button onClick={backToPage}>Back</button>
+            <button onClick={backToPage}>
+              <IoIosArrowBack />
+              Back
+            </button>
           </nav>
-          {eventsData &&
-            eventsData.map(
-              (event) =>
-                event.id === eventId && (
-                  <section className="each_event" key={event.id}>
-                    <div className="event-context">
-                      <h5>{event.eventTitle}</h5>
-                      {event.eventDescrption.map((newline) => (
-                        <p className="newline">{newline}</p>
-                      ))}
-                      <div className="imgcontainer">
-                        <img
-                          className="event-flier-img"
-                          src={event.flierUrl}
-                          alt=""
-                        />
-                      </div>
-                      <div className="event_btn">
-                        <button>Shoot your shot</button>
-                      </div>
-                    </div>
+          {eventPost !== undefined && (
+            <section className="each_event" key={eventPost.id}>
+              <div className="event-context">
+                <h5>{eventPost.eventTitle}</h5>
+                {eventPost.eventDescrption.map((newline) => (
+                  <p className="newline">{newline}</p>
+                ))}
+                <div className="imgcontainer">
+                  <img
+                    className="event-flier-img"
+                    src={eventPost.flierUrl}
+                    alt=""
+                  />
+                </div>
+                <div className="event_btn">
+                  <button>Shoot your shot</button>
+                </div>
+              </div>
 
-                    <div className="event-time-and-venue">
-                      <span>
-                        <h5>Date of Event</h5>
-                        <p>August 16 2022</p>
-                      </span>
-                      <hr />
-                      <span>
-                        <h5>Time</h5>
-                        <p>{event.time}</p>
-                      </span>
-                      <hr />
-                      <span>
-                        <h5>Venue</h5>
-                        <p>{event.venue}</p>
-                      </span>
-                      <hr />
-                      <span>
-                        <h5>Ticket Link</h5>
-                        <p>{event.ticketlink}</p>
-                        <p></p>
-                      </span>
-                      <hr />
-                      <div className="about_client">
-                        <h5>About Client</h5>
-                      </div>
-                    </div>
-                  </section>
-                )
-            )}
+              <div className="event-time-and-venue">
+                <span>
+                  <h5>Date of Event</h5>
+                  <p>August 16 2022</p>
+                </span>
+                <hr />
+                <span>
+                  <h5>Time</h5>
+                  <p>{eventPost.time}</p>
+                </span>
+                <hr />
+                <span>
+                  <h5>Venue</h5>
+                  <p>{eventPost.venue}</p>
+                </span>
+                <hr />
+                <span>
+                  <h5>Ticket Link</h5>
+                  <p>{eventPost.ticketlink}</p>
+                  <p></p>
+                </span>
+                <hr />
+                <div className="about_client">
+                  <h5>About Client</h5>
+                  <CardProfile />
+                </div>
+              </div>
+            </section>
+          )}
         </section>
       )}
     </section>

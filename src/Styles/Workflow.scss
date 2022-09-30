@@ -1,5 +1,6 @@
 @import "./dashboardUI/Edulance/edulance.scss";
 @import "./dashboardUI/Sidebar.scss";
+@import './dashboardUI/CardProfile.scss';
 // navcontainer
 @import "./dashboardUI/Nav/navbar.scss";
 @import "./dashboardUI/Nav/navProfile.scss";
@@ -16,6 +17,19 @@
 @import "./dashboardUI/Community/Events/EventsContainer.scss";
 @import "./dashboardUI/Community/Events/PostEvent.scss";
 @import "./dashboardUI/Community/Events/Drapdrop.scss";
+// library 
+@import "./dashboardUI/Library/Library.scss";
+@import "./dashboardUI/Library/Books.scss";
+@import "./dashboardUI/Library/SearchBooks.scss";
+@import "./dashboardUI/Library/AddBook.scss";
+@import "./dashboardUI/Library/SingleBook.scss";
+// market place
+@import "./dashboardUI/marketPlace/MarketPLace.scss";
+@import "./dashboardUI/marketPlace/SearchProducts.scss";
+@import "./dashboardUI/marketPlace/MarketItems.scss";
+@import "./dashboardUI/marketPlace/SingleProducts.scss";
+@import "./dashboardUI/marketPlace/uploadProduct.scss";
+@import "./dashboardUI/marketPlace/Products.scss";
 
 *,
 ::after ,

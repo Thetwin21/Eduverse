@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MdCancel } from "react-icons/md";
-import Dragdrop from "./Dragdrop";
+import Dragdrop from "../../Component/Dragdrop.jsx";
 
 const PostEvent = ({ backToComPag }) => {
   const [textareaHight, setTextareaHight] = useState(7);

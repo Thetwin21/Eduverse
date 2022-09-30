@@ -1,0 +1,165 @@
+.single_book_container {
+  padding: 0 var(--space-4);
+  overflow-y: auto;
+  height: calc(100vh - 3rem);
+  //   button after navbar
+  > .btn_container {
+    margin-bottom: var(--space-2);
+    margin: 0;
+    button {
+      display: flex;
+      padding: 0.8em 1.2em;
+      border: none;
+      align-items: center;
+      border-radius: 5px;
+      cursor: pointer;
+      gap: 0.2em;
+      background: var(--ash-background-btn);
+    }
+  }
+
+  //   single book container
+  .single_book {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    line-height: var(--line-height-3);
+
+    //   .paid_container & free_container
+    .paid_container,
+    .free_container {
+      display: grid;
+      grid-template-columns: auto 11rem;
+      gap: var(--space-2);
+      .free,
+      .paid {
+        > div {
+          margin: var(--space-2) 0;
+        }
+        .read_more {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: none;
+          background: none;
+          font-weight: 600;
+          gap: 0.2rem;
+          margin: 5px 0;
+          cursor: pointer;
+        }
+
+        .details_f,
+        .details_p {
+          .author {
+            color: var(--color-gray);
+            font-size: var(--h5);
+            span {
+              color: var(--btnColor);
+              font-weight: 500;
+            }
+          }
+        }
+        //   more details for both paid & free books
+        .more_details {
+          font-size: var(--h6);
+          .genre {
+            span {
+              padding: 1px 5px;
+              background: var(--ash-background-btn);
+              border-radius: 10px;
+            }
+          }
+        }
+        .about_author_container,
+        .reviews {
+          color: var(--color-gray);
+        }
+        .about_author_container {
+          .card {
+            display: flex;
+            align-items: center;
+            margin: var(--space-2) 0;
+            gap: 0.2rem;
+            img {
+              width: 2rem;
+              height: 2rem;
+              border-radius: 50%;
+            }
+          }
+        }
+        .similar_books {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: var(--space-3);
+          padding: var(--padding-2);
+          .book {
+            position: relative;
+            .isFree {
+              position: absolute;
+              background: var(--color-white);
+              padding: 1px 2px;
+              border-radius: 2px;
+              font-size: var(--h6);
+              font-weight: 600;
+              right: 3%;
+              top: 4%;
+              z-index: 99;
+            }
+            .img {
+              width: 100%;
+              height: 6rem;
+              border-radius: 10px;
+              margin-bottom: var(--space-2);
+              overflow: hidden;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+            .details {
+              cursor: pointer;
+              .title {
+                font-size: var(--h6);
+                font-weight: 600;
+              }
+              .author {
+                font-size: var(--h6);
+                color: var(--color-gray);
+              }
+            }
+          }
+        }
+      }
+      .download_section {
+        padding: 0 10px;
+        box-sizing: border-box;
+        img {
+          width: 100%;
+          height: 12rem;
+          border-radius: 5px;
+        }
+        .download_btn,.add_to_cart {
+            width: 100%;
+            height: 2rem;
+            font-size: var(--h6);
+            border-radius: 2px;
+        //   padding: 10px 20px;
+          border: 2px solid var(--btnColor);
+          background: var(--color-white);
+          color: var(--btnColor);
+          cursor: pointer;
+        }
+        .download_btn {
+          background: var(--btnColor);
+          color: var(--color-white);
+          margin: var(--space-2) 0;
+          border: none;
+        }
+      }
+    }
+  }
+}
+.single_book_container-::-webkit-scrollbar-thumb {
+  width: 2px;
+}

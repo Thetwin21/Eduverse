@@ -1,0 +1,31 @@
+.market_place {
+  position: relative;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  .market_content {
+    height: calc(100vh - 4rem);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+
+    > h3 {
+      padding: 0 var(--space-2);
+      margin-bottom: var(--space-1);
+    }
+  }
+  .market_content::-webkit-scrollbar {
+    width: 2px;
+  }
+  .upload_item_container {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.412);
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+}

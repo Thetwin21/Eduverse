@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavProfile from "../NavComponent/NavProfile";
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import { IoIosArrowBack } from "react-icons/io";
 import ShotForm from "./ShotForm";
 import Period from "./Period";
 
@@ -8,7 +8,7 @@ const ShotPage = ({ posts, arrId, shootAshot }) => {
   const [ show,setShow ] = useState(true);
 
   // post id of the clicked
-  const post = posts[arrId];
+  const post = posts[arrId - 1];
   return (
     <section className="shotPage">
       <nav>
@@ -18,7 +18,7 @@ const ShotPage = ({ posts, arrId, shootAshot }) => {
       <div className="container">
         <div className="btn">
           <button onClick={() => shootAshot((prevShot) => !prevShot)}>
-            <AiOutlineArrowLeft /> back
+            <IoIosArrowBack /> back
           </button>
         </div>
         <div className="content-details">

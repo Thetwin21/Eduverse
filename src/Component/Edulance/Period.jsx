@@ -1,4 +1,5 @@
 import React from "react";
+import CardProfile from "../CardProfile";
 
 const Period = ({post}) => {
   return (
@@ -27,22 +28,7 @@ const Period = ({post}) => {
         <p>Open 28days left</p>
       </div>
       <hr />
-      <div className="about-client">
-        <div className="card">
-          <div className="img">
-            <img src={post.url} alt="" />
-          </div>
-          <div className="name">
-            <p>{post.name}</p>
-            <p className="username">{post.username}</p>
-          </div>
-        </div>
-        <div className="prof">
-          {post.profession.map((data,index) => (
-            <p key={index}>{data}</p>
-          ))}
-        </div>
-      </div>
+     <CardProfile />
     </section>
   );
 };
