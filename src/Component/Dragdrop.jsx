@@ -12,24 +12,36 @@ const DragDrop = () => {
   // handle drag events
   const handleDrag = function (e) {
     e.preventDefault();
-    e.stopPropagation();
-    if (e.type === "dragenter" || e.type === "dragover") {
-      setDragActive(true);
-    } else if (e.type === "dragleave") {
-      setDragActive(false);
-    }
+
+    setDragActive(true);
   };
 
   // triggers when file is dropped
   const handleDrop = function (e) {
+    console.log("File dropped");
+    // Prevent default behavior (Prevent file from being opened)
     e.preventDefault();
-    e.stopPropagation();
-    setDragActive(false);
-    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      const fileimg = e.dataTransfer.getData("text/plain");
-      // handleFiles({files,fileimg: e.dataTransfer.files});
-      console.log(fileimg);
+    const myFiles = [];
+    if (e.dataTransfer.items) {
+      // Use DataTransferItemList interface to access the file(s)
+      [...e.dataTransfer.items].forEach((item, i) => {
+        // If dropped items aren't files, reject them
+        if (item.kind === "file") {
+          const file = item.getAsFile();
+          console.log(`… file[${i}].name = ${file.name}`);
+          myFiles.push(file);
+          console.log(myFiles);
+        }
+      });
+    } else {
+      // Use DataTransfer interface to access the file(s)
+      [...e.dataTransfer.files].forEach((file, i) => {
+        console.log(`… file[${i}].name = ${file}`);
+        console.log(myFiles);
+        myFiles.push(file);
+      });
     }
+    handleFiles(myFiles);
   };
 
   // triggers when file is selected with click
@@ -48,7 +60,8 @@ const DragDrop = () => {
   return (
     <div
       id="form-file-upload"
-      onDragEnter={handleDrag}
+      onDrop={handleDrop}
+      onDragOver={handleDrag}
       onSubmit={(e) => e.preventDefault()}
     >
       <input
@@ -72,14 +85,10 @@ const DragDrop = () => {
         </div>
       </label>
       {dragActive && (
-        <div
-          id="drag-file-element"
-          onDragEnter={handleDrag}
-          onDragLeave={handleDrag}
-          onDragOver={handleDrag}
-          onDrop={handleDrop}
-        >
-          {files && <img src={files.name} alt="" className="files" />}
+        <div id="drag-file-element">
+          {files && (
+            <img src={URL.createObjectURL(files[0])} alt="" className="files" />
+          )}
         </div>
       )}
     </div>
